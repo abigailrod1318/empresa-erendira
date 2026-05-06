@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios | EIMO</title>
+
+<style>
+:root {
+  --dark: #190019;
+  --primary: #2B124C;
+  --secondary: #522B5B;
+  --accent: #854F6C;
+  --soft: #DFB6B2;
+  --light: #FBE4D8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--soft), var(--primary));
+  color: white;
+}
+
+/* NAV */
+.navbar {
+  width: 92%;
+  margin: 24px auto;
+  padding: 18px 24px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--light);
+  text-decoration: none;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+/* HERO */
+.hero {
+  width: 92%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: var(--soft);
+}
+
+/* SERVICIOS */
+.services {
+  width: 92%;
+  margin: 60px auto;
+  padding: 50px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: var(--soft);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+/* BOTÓN */
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* FOOTER */
+footer {
+  width: 92%;
+  margin: 80px auto;
+  padding: 50px;
+  border-radius: 30px;
+  background: var(--dark);
+  text-align: center;
+}
+
+footer p {
+  color: var(--soft);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+  <a class="btn"  href="FfacialCorporal.html">Facial y corporal Eimo</a>
+  <nav>
+    <a class="btn" href="Ferendira.html">Dr. Erendira Reyes</a>
+    <a class="btn" href="Fconocefacial.html">Conócenos</a>
+    <a class="btn" href="Fservicios.html">Servicios</a>
+    <a class="btn" href="Fredesfacial.html">BLOG</a>
+    <a class="btn" href="index.html">Dental Eimo</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Nuestros Servicios</h1>
+  <p>Tratamientos diseñados para tu bienestar, belleza y confianza</p>
+</section>
+
+<!-- SERVICIOS -->
+<section class="services">
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883">
+      <h3>Limpieza Facial</h3>
+      <p>Elimina impurezas, hidrata y revitaliza tu piel.</p>
+      <a href="agenda.html" class="btn">Agendar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea">
+      <h3>Tratamiento Antiacné</h3>
+      <p>Controla el acné y mejora la textura de la piel.</p>
+      <a href="agenda.html" class="btn">Agendar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2">
+      <h3>Masaje Relajante</h3>
+      <p>Reduce el estrés y mejora tu bienestar general.</p>
+      <a href="agenda.html" class="btn">Agendar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9">
+      <h3>Tratamiento Corporal</h3>
+      <p>Mejora la firmeza y apariencia de tu piel.</p>
+      <a href="agenda.html" class="btn">Agendar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
+      <h3>Blanqueamiento Dental</h3>
+      <p>Recupera el brillo natural de tu sonrisa.</p>
+      <a href="agenda.html" class="btn">Agendar</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+      <h3>Ortodoncia</h3>
+      <p>Corrige la alineación dental con tecnología moderna.</p>
+      <a href="agenda.html" class="btn">Agendar</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h2>Invierte en tu bienestar</h2>
+  <p>Agenda tu cita y comienza tu transformación</p>
+  <a href="agenda.html" class="btn">Reservar ahora</a>
+</footer>
+
+</body>
+</html>
