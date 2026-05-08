@@ -158,6 +158,166 @@ footer p {
     font-size: 40px;
   }
 }
+
+/* ===== RESPONSIVE GLOBAL ===== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero,
+.about,
+.doctor,
+.reviews {
+  width: 92%;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.service-grid,
+.grid,
+.feature-grid,
+.feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+h1 {
+  font-size: clamp(32px, 6vw, 72px) !important;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(26px, 5vw, 56px) !important;
+  line-height: 1.1;
+}
+
+.navbar {
+  flex-wrap: wrap !important;
+  gap: 20px;
+}
+
+nav {
+  flex-wrap: wrap !important;
+  justify-content: center;
+}
+
+.btn {
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1024px) {
+
+  .hero,
+  .about,
+  .doctor,
+  .reviews {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-image img,
+  .doctor img,
+  .about img {
+    height: 420px !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    flex-direction: column !important;
+    border-radius: 30px !important;
+    padding: 20px !important;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero,
+  .services,
+  .about,
+  .doctor,
+  .reviews,
+  footer {
+    width: 95% !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .service-grid,
+  .grid,
+  .feature-grid,
+  .feed {
+    grid-template-columns: 1fr !important;
+  }
+
+  .services,
+  footer {
+    padding: 28px !important;
+    border-radius: 28px !important;
+  }
+
+  .hero img,
+  .doctor img,
+  .about img,
+  .service-card img,
+  .post img {
+    height: 300px !important;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 34px !important;
+  }
+
+  h2 {
+    font-size: 28px !important;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .hero img,
+  .doctor img,
+  .about img {
+    height: 240px !important;
+  }
+
+  .service-card,
+  .card,
+  .post {
+    border-radius: 20px !important;
+  }
+}
+
 </style>
 </head>
 

@@ -37,6 +37,7 @@ body {
   display: flex;
   justify-content: space-between;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  align-items: center;
 }
 
 nav {
@@ -64,6 +65,12 @@ nav a {
   font-weight: 600;
   border: none;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 /* SECCIÓN PRINCIPAL */
@@ -84,6 +91,7 @@ h1 {
 p {
   color: #444;
   margin-bottom: 15px;
+  line-height: 1.6;
 }
 
 /* FORMULARIO */
@@ -103,6 +111,7 @@ p {
   border-radius: 15px;
   border: 1px solid #ddd;
   font-family: inherit;
+  font-size: 15px;
 }
 
 .form-box input:focus,
@@ -133,6 +142,8 @@ footer {
 
 footer p {
   color: var(--secondary);
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 footer .btn {
@@ -142,6 +153,18 @@ footer .btn {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .about {
     grid-template-columns: 1fr;
   }
@@ -149,7 +172,171 @@ footer .btn {
   h1 {
     font-size: 42px;
   }
+
+  .about img {
+    height: 380px;
+  }
 }
+
+/* ===== RESPONSIVE GLOBAL ===== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero,
+.about,
+.doctor,
+.reviews {
+  width: 92%;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.service-grid,
+.grid,
+.feature-grid,
+.feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+h1 {
+  font-size: clamp(32px, 6vw, 72px) !important;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(26px, 5vw, 56px) !important;
+  line-height: 1.1;
+}
+
+.navbar {
+  flex-wrap: wrap !important;
+  gap: 20px;
+}
+
+nav {
+  flex-wrap: wrap !important;
+  justify-content: center;
+}
+
+.btn {
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1024px) {
+
+  .hero,
+  .about,
+  .doctor,
+  .reviews {
+    grid-template-columns: 1fr !important;
+  }
+
+  .hero-image img,
+  .doctor img,
+  .about img {
+    height: 420px !important;
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    flex-direction: column !important;
+    border-radius: 30px !important;
+    padding: 20px !important;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero,
+  .services,
+  .about,
+  .doctor,
+  .reviews,
+  footer {
+    width: 95% !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .service-grid,
+  .grid,
+  .feature-grid,
+  .feed {
+    grid-template-columns: 1fr !important;
+  }
+
+  .services,
+  footer {
+    padding: 28px !important;
+    border-radius: 28px !important;
+  }
+
+  .hero img,
+  .doctor img,
+  .about img,
+  .service-card img,
+  .post img {
+    height: 300px !important;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 34px !important;
+  }
+
+  h2 {
+    font-size: 28px !important;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .hero img,
+  .doctor img,
+  .about img {
+    height: 240px !important;
+  }
+
+  .service-card,
+  .card,
+  .post {
+    border-radius: 20px !important;
+  }
+}
+
 </style>
 </head>
 
@@ -157,15 +344,21 @@ footer .btn {
 
 <!-- NAVBAR -->
 <div class="navbar">
- <a  class="btn"href="index.html">Dental Eimo</a>
+
+  <a class="btn" href="index.html">Dental Eimo</a>
+
   <nav>
     <a href="Ddentista.html">Dr. Erendira Reyes</a>
-    <a href="Dconocenos.html">Conocenos</a>
+    <a href="Dconocenos.html">Conócenos</a>
     <a href="Dservicios.html">Servicios</a>
     <a href="Dblog.html">Blog</a>
     <a href="Dagendarcita.html">Agendar cita</a>
   </nav>
-   <a class="btn" href="FfacialCorporal.html">Facial y corporal </a>
+
+  <a class="btn" href="FfacialCorporal.html">
+    Facial y corporal
+  </a>
+
 </div>
 
 <!-- SECCIÓN AGENDAR -->
@@ -173,49 +366,83 @@ footer .btn {
 
   <!-- TEXTO -->
   <div>
+
     <h1>Agenda tu cita</h1>
+
     <p>
-      Da el primer paso hacia una sonrisa saludable. Nuestro equipo está listo
-      para brindarte atención profesional y personalizada.
+      Da el primer paso hacia una sonrisa saludable.
+      Nuestro equipo está listo para brindarte atención
+      profesional y personalizada.
     </p>
+
     <p>
-      Completa el formulario y nos pondremos en contacto contigo para confirmar tu cita.
+      Completa el formulario y nos pondremos en contacto
+      contigo para confirmar tu cita.
     </p>
 
     <div class="form-box">
-      <form>
-        <input type="text" placeholder="Nombre completo" required>
-        <input type="email" placeholder="Correo electrónico" required>
-        <input type="tel" placeholder="Teléfono" required>
+  <form action="https://formsubmit.co/abigail.rodriguez0713@gmail.com" method="POST">
 
-        <select required>
-          <option value="">Selecciona un servicio</option>
-          <option>Limpieza dental</option>
-          <option>Blanqueamiento</option>
-          <option>Ortodoncia</option>
-          <option>Implantes</option>
-        </select>
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
 
-        <input type="date" required>
-        <textarea rows="3" placeholder="Mensaje adicional (opcional)"></textarea>
+    <input type="email" name="correo" placeholder="Correo electrónico" required>
 
-        <button type="submit" class="btn">Agendar ahora</button>
+    <input type="tel" name="telefono" placeholder="Teléfono" required>
+
+    <select name="servicio" required>
+      <option value="">Selecciona un servicio</option>
+      <option>Limpieza dental</option>
+      <option>Blanqueamiento</option>
+      <option>Ortodoncia</option>
+      <option>Implantes</option>
+    </select>
+
+    <input type="date" name="fecha" required>
+
+    <textarea name="mensaje" rows="3" placeholder="Mensaje adicional (opcional)"></textarea>
+
+    <!-- CONFIGURACIÓN -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="hidden" name="_next" value="https://tupagina.com/gracias.html">
+
+    <button type="submit" class="btn">Agendar ahora</button>
+
+  </form>
+</div>
+
+
+
+
       </form>
+
     </div>
+
   </div>
 
   <!-- IMAGEN -->
   <div>
-    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" alt="Consulta dental">
+    <img 
+      src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5" 
+      alt="Consulta dental"
+    >
   </div>
 
 </section>
 
 <!-- FOOTER -->
 <footer>
+
   <h2>Tu salud dental comienza aquí</h2>
-  <p>Estamos listos para atenderte</p>
-  <a href="https://w.app/zdmcqv" class="btn">Contactar</a>
+
+  <p>
+    Estamos listos para atenderte
+  </p>
+
+  <a href="https://w.app/zdmcqv" class="btn">
+    Contactar
+  </a>
+
 </footer>
 
 </body>
