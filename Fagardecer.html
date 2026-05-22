@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gracias por agendar | Facial & Corporal EIMO</title>
+
+<style>
+:root {
+  --dark: #190019;
+  --primary: #2B124C;
+  --secondary: #522B5B;
+  --accent: #854F6C;
+  --soft: #DFB6B2;
+  --light: #FBE4D8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--soft), var(--primary));
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAV */
+.navbar {
+  width: 92%;
+  margin: 24px auto;
+  padding: 18px 24px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* BOTONES */
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn.secondary {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* HERO */
+.thanks {
+  width: 92%;
+  min-height: 620px;
+  margin: 70px auto;
+  padding: 70px;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  color: var(--light);
+  padding: 10px 18px;
+  border-radius: 30px;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+
+.thanks h1 {
+  font-size: clamp(38px, 6vw, 76px);
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.thanks p {
+  color: var(--soft);
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* CARD */
+.confirmation-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 40px;
+  padding: 40px;
+  text-align: center;
+}
+
+.check {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 24px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 54px;
+  font-weight: bold;
+  box-shadow: 0 12px 30px rgba(133,79,108,0.45);
+}
+
+.confirmation-card h2 {
+  font-size: clamp(28px, 4vw, 46px);
+  margin-bottom: 12px;
+}
+
+.confirmation-card p {
+  color: var(--soft);
+}
+
+/* INFO */
+.info {
+  width: 92%;
+  margin: 70px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.08);
+  padding: 30px;
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+}
+
+.info-card h3 {
+  color: var(--light);
+  margin-bottom: 12px;
+}
+
+.info-card p {
+  color: var(--soft);
+}
+
+/* FOOTER */
+footer {
+  width: 92%;
+  margin: 80px auto 30px;
+  padding: 50px;
+  border-radius: 40px;
+  background: var(--dark);
+  text-align: center;
+}
+
+footer h2 {
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: var(--soft);
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-direction: column;
+    border-radius: 30px;
+  }
+
+  .thanks {
+    grid-template-columns: 1fr;
+    padding: 40px 28px;
+    border-radius: 35px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .thanks {
+    width: 95%;
+    padding: 30px 22px;
+  }
+
+  .thanks p {
+    font-size: 15px;
+  }
+
+  .confirmation-card {
+    padding: 28px;
+    border-radius: 28px;
+  }
+
+  .check {
+    width: 86px;
+    height: 86px;
+    font-size: 42px;
+  }
+
+  footer {
+    width: 95%;
+    padding: 35px 24px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+
+  <a class="btn" href="FfacialCorporal.html">
+    Facial y corporal Eimo
+  </a>
+
+  <nav>
+    <a href="Ferendira.html">Dr. Erendira Reyes</a>
+    <a href="Fconocefacial.html">Conócenos</a>
+    <a href="Fservicios.html">Servicios</a>
+    <a href="Fredesfacial.html">BLOG</a>
+    <a href="index.html">Dental Eimo</a>
+  </nav>
+
+</div>
+
+<!-- HERO -->
+<section class="thanks">
+
+  <div>
+
+    <div class="badge">
+      Solicitud enviada correctamente
+    </div>
+
+    <h1>Gracias por agendar tu sesión</h1>
+
+    <p>
+      Hemos recibido tu solicitud correctamente.
+      Muy pronto nos pondremos en contacto contigo
+      para confirmar tu tratamiento y horario.
+    </p>
+
+    <p>
+      En Facial & Corporal EIMO buscamos brindarte
+      una experiencia relajante, profesional y diseñada
+      especialmente para tu bienestar.
+    </p>
+
+    <div class="actions">
+      <a href="FfacialCorporal.html" class="btn">
+        Volver al inicio
+      </a>
+
+      <a href="https://w.app/zdmcqv" class="btn secondary">
+        Contactar por WhatsApp
+      </a>
+    </div>
+
+  </div>
+
+  <!-- CARD -->
+  <div class="confirmation-card">
+
+    <div class="check">✓</div>
+
+    <h2>Sesión registrada</h2>
+
+    <p>
+      Tu información fue enviada exitosamente.
+      Te recomendamos estar pendiente de tu teléfono
+      o WhatsApp para confirmar tu cita.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- INFO -->
+<section class="info">
+
+  <div class="info-card">
+    <h3>Confirmación</h3>
+    <p>
+      Verificaremos disponibilidad y horario para tu sesión.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>Atención personalizada</h3>
+    <p>
+      Resolveremos tus dudas antes de tu tratamiento.
+    </p>
+  </div>
+
+  <div class="info-card">
+    <h3>Bienestar integral</h3>
+    <p>
+      Cada experiencia está diseñada para relajación y cuidado.
+    </p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <h2>Gracias por confiar en EIMO</h2>
+
+  <p>
+    Tu bienestar y cuidado personal son nuestra prioridad
+  </p>
+
+  <a href="https://w.app/zdmcqv" class="btn">
+    Contactar
+  </a>
+
+</footer>
+
+</body>
+</html>

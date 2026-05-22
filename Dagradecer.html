@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gracias por agendar | Clínica Dental EIMO</title>
+
+<style>
+:root {
+  --primary: #84bac9;
+  --secondary: #ceaea5;
+  --accent: #1fb5b7;
+  --light: #c0dae8;
+  --dark: #000000;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 92%;
+  margin: 24px auto;
+  padding: 18px 24px;
+  background: var(--white);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+/* BOTONES */
+.btn {
+  background: var(--accent);
+  color: var(--white);
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+}
+
+/* HERO GRACIAS */
+.thanks {
+  width: 92%;
+  min-height: 620px;
+  margin: 70px auto;
+  padding: 70px;
+  background: var(--white);
+  border-radius: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.thanks-content span {
+  display: inline-block;
+  background: rgba(31, 181, 183, 0.12);
+  color: var(--accent);
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.thanks h1 {
+  font-size: clamp(38px, 6vw, 76px);
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+
+.thanks p {
+  color: #444;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn.secondary {
+  background: var(--dark);
+  color: var(--white);
+}
+
+/* CARD */
+.confirmation-card {
+  background: var(--light);
+  border-radius: 40px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+}
+
+.check {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 25px;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 54px;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(31,181,183,0.35);
+}
+
+.confirmation-card h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  margin-bottom: 12px;
+}
+
+.confirmation-card p {
+  color: #444;
+}
+
+/* INFO */
+.info {
+  width: 92%;
+  margin: 70px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.info-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.info-card h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  color: #444;
+}
+
+/* FOOTER */
+footer {
+  width: 92%;
+  margin: 80px auto 30px;
+  background: var(--dark);
+  color: var(--white);
+  padding: 50px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+footer p {
+  color: var(--secondary);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+footer .btn {
+  background: var(--white);
+  color: var(--dark);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px;
+  }
+
+  .thanks {
+    grid-template-columns: 1fr;
+    padding: 40px 28px;
+    border-radius: 35px;
+    margin-top: 45px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .thanks {
+    width: 95%;
+    padding: 32px 22px;
+  }
+
+  .thanks p {
+    font-size: 15px;
+  }
+
+  .confirmation-card {
+    padding: 28px;
+    border-radius: 28px;
+  }
+
+  .check {
+    width: 86px;
+    height: 86px;
+    font-size: 42px;
+  }
+
+  footer {
+    width: 95%;
+    padding: 35px 24px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+
+  <a class="btn" href="index.html">Dental Eimo</a>
+
+  <nav>
+    <a href="Ddentista.html">Dr. Erendira Reyes</a>
+    <a href="Dconocenos.html">Conócenos</a>
+    <a href="Dservicios.html">Servicios</a>
+    <a href="Dblog.html">Blog</a>
+    <a href="Dagendarcita.html">Agendar cita</a>
+  </nav>
+
+  <a class="btn" href="FfacialCorporal.html">Facial y corporal</a>
+
+</div>
+
+<!-- GRACIAS -->
+<section class="thanks">
+
+  <div class="thanks-content">
+    <span>Cita recibida correctamente</span>
+
+    <h1>Gracias por agendar tu cita</h1>
+
+    <p>
+      Hemos recibido tu solicitud. En breve nos pondremos en contacto contigo
+      para confirmar el día, horario y servicio solicitado.
+    </p>
+
+    <p>
+      En Clínica Dental EIMO será un gusto atenderte con profesionalismo,
+      confianza y atención personalizada.
+    </p>
+
+    <div class="actions">
+      <a href="index.html" class="btn">Volver al inicio</a>
+      <a href="https://w.app/zdmcqv" class="btn secondary">Contactar por WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="confirmation-card">
+    <div class="check">✓</div>
+    <h2>Solicitud enviada</h2>
+    <p>
+      Tu información fue enviada con éxito. Te recomendamos estar pendiente
+      de tu teléfono o WhatsApp para confirmar tu cita.
+    </p>
+  </div>
+
+</section>
+
+<!-- INFORMACIÓN -->
+<section class="info">
+
+  <div class="info-card">
+    <h3>Confirmación</h3>
+    <p>Te contactaremos para validar disponibilidad y horario.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>Atención personalizada</h3>
+    <p>Resolveremos tus dudas antes de tu consulta.</p>
+  </div>
+
+  <div class="info-card">
+    <h3>Ubicación y detalles</h3>
+    <p>Podrás solicitar indicaciones o más información por WhatsApp.</p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <h2>Tu salud dental comienza aquí</h2>
+
+  <p>
+    Gracias por confiar en Clínica Dental EIMO
+  </p>
+
+  <a href="https://w.app/zdmcqv" class="btn">
+    Contactar
+  </a>
+
+</footer>
+
+</body>
+</html>
